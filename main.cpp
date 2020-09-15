@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include "heapsort.h"
 using namespace std ;
 void heapsort (int b[],int x );
 
@@ -10,7 +11,7 @@ int main (){
   cout << " Cuantos elementos va a ingresar : \n";
   cin >> n ;
   for (int i = 1; i <= n ; i++){
-    cout << "Elemento"<<i<< " : ";
+    cout << "Elemento "<<i<< " : ";
     cin >> A[i];
   }
   cout << "EL ARREGLO DESORDENADO ES :";
@@ -33,31 +34,6 @@ int main (){
   archivo.close();
 
 }
-void heapsort (int b[],int  n ){
-  int valor, temp , a ;
-  for (int i = n ; i > 0;i--  ){
-    for (int j =1 ; j <= i; j++){
-      valor = b[j];
-      a = j/2;
-      while (a>0 && b [a]<valor){
-        b[j]=b[a];
-        j = a ;
-        a = a /2;
-
-      }
-      b[j]= valor ;
-
-    }
-    temp=b[1];
-    b [1]=b[i];
-    b[i]=temp;
-
-  }
- 
-
-
-}
-
 
 
 
